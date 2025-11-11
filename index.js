@@ -327,12 +327,13 @@ var f = 10;
 const obj = {};
 obj[true] = "A";
 obj[1] = "B";
-console.log(obj[true]); // Output: "B"
+console.log(obj[true]); // Output: "A"
 
 // Why? (Explanation)
 // Object keys are converted to strings.
-// true → "true", 1 → "1"
-// But both map to same key implicitly → overwritten.
+// true becomes "true"
+// 1 becomes "1"
+// "true" and "1" are different keys, so no overwrite happens.
 
 // --------------------------------------------------------------------------------------------------------------------------------------------
 // Example 28: typeof NaN
